@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import ItemTodo from '../itemTodo/itemTodo'
+import './inputTodo.css'
+
+const todoList = ['teste1', 'teste2']
 
 const inputTodo = () => {
   const [input, setInput] = useState('')
   return (
     <div className="container">
       <div className="row justify-content-md-center">
-        <div className="col-sm-8">
+        <div className="col-sm-8 w-50">
           <div className="input-group input-group-lg justify-content-center">
             <input
               type="text"
@@ -23,11 +26,12 @@ const inputTodo = () => {
                   console.log(input)
                 }
               }}/>
-        </div>
-        <ul>
-            <ItemTodo />
-            <ItemTodo />
-        </ul>
+          </div>
+          <ul>
+            {todoList.map((item, index) => (
+              <ItemTodo key={index} texto={item} />
+            ))}
+          </ul>
         </div>
       </div>
     </div>

@@ -1,17 +1,21 @@
 import React from 'react'
+import './itemTodo.css'
 
-const itemTodo = () => {
+const itemTodo = (props) => {
   return (
-      <li>
-        <div className="card">
-            <div className="form-check w-25">
-                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                <label className="form-check-label" htmlFor="flexCheckDefault">
-                    Texto aqui
-                </label>
-            </div>
-        </div>
-      </li>
+    <li className="card">
+      <div className="form-check">
+        <input
+          className="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label className="form-check-label" htmlFor="flexCheckDefault">
+          {props.texto}
+        </label>
+      </div>
+    </li>
   )
 }
 
