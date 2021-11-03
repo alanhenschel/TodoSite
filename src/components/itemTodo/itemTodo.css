@@ -1,16 +1,26 @@
 .form-check {
-    max-width: 50px;
-    padding-left: 2.0em;
+  max-width: 50px;
+  padding-left: 2em;
+}
+
+.card {
+  border-radius: 0;
+}
+
+.input-group-lg > .form-control {
+  border-radius: 0;
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 li {
-    font-size: 24px;  
+  font-size: 24px;
 }
 
 li > div {
-    padding: 15px 15px 15px; 
+  padding: 15px 15px 15px;
 }
 
-.form-check-input[type=checkbox] {
-    border-radius: 50%;
+.form-check-input[type="checkbox"] {
+  border-radius: 50%;
 }

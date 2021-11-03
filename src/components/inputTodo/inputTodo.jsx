@@ -25,13 +25,24 @@ const inputTodo = () => {
                 if (event.key === 'Enter') {
                   console.log(input)
                 }
-              }}/>
+              }}
+            />
           </div>
           <ul>
             {todoList.map((item, index) => (
               <ItemTodo key={index} texto={item} />
             ))}
           </ul>
+          <div className="card">
+            <div className="d-flex footer-padding">
+              <span> 1 Itens faltando</span>
+              <div className="d-flex margin-left">
+                <span>todos</span>
+                <span>ativo</span>
+                <span>completado</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
