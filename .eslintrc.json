@@ -5,8 +5,11 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "standard"
+        "standard",
+        "prettier",
+        "prettier/react"
     ],
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -18,5 +21,20 @@
         "react"
     ],
     "rules": {
+        "prettier/prettier": "error",
+        "react/jsx-filename-extension": [
+            "warn",
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "import/prefer-default-export": "off",
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ]
     }
 }
