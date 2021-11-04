@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import ItemTodo from '../itemTodo/itemTodo'
 import './inputTodo.css'
 
-const todoList = ['teste1', 'teste2']
-
 const inputTodo = () => {
   const [input, setInput] = useState('')
+  const [todoList, setTodoList] = useState([])
   return (
     <div className="container">
       <div className="row justify-content-md-center">
@@ -22,16 +21,15 @@ const inputTodo = () => {
                 setInput(event.target.value)
               }}
               onKeyPress={(event) => {
-                if (event.key === 'Enter') {
-                  console.log(input)
+                if (event.key === 'Enter' && input !== '') {
+                  setTodoList(todoList.concat(input))
+                  setInput('')
                 }
               }}
             />
           </div>
           <ul>
-            {todoList.map((item, index) => (
-              <ItemTodo key={index} texto={item} />
-            ))}
+            <ItemTodo todoList={todoList} onDelete={setTodoList} />
           </ul>
           <div className="card">
             <div className="d-flex footer-padding">
