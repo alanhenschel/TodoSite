@@ -1,0 +1,61 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-size: 16px;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+::placeholder {
+  padding: 150px;
+}
+
+span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.right-footer-menu {
+  margin-left: 5rem;
+  max-height: 20px;
+}
+
+.footer-padding {
+  padding: 10px 15px;
+}
+
+.bg-light {
+  --bs-bg-opacity: none;
+}
+
+.navbar {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.btn {
+  padding: 0.1rem 0.5rem;
+  margin-right: 4px;
+}
+
+.btn-selecionado {
+  color: #000;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+  box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
+}
+
+.btn-light {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-light:hover {
+  border-color: rgba(175, 47, 47, 0.1);
+}

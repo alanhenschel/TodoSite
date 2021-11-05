@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './itemTodo.css'
+import './styles.css'
 
 const itemTodo = ({ todoList, onDelete }) => {
   const [isShown, setIsShown] = useState(false)
@@ -20,13 +20,15 @@ const itemTodo = ({ todoList, onDelete }) => {
               id="flexCheckDefault"
             />
             <label className="form-check-label" htmlFor="flexCheckDefault">
-              {item}
+              {item.texto}
             </label>
           </div>
           {isShown && (
             <div
               onClick={() => {
-                onDelete(todoList.filter((texto, indexTexto) => indexTexto !== index))
+                onDelete(
+                  todoList.filter((texto, indexTexto) => indexTexto !== index)
+                )
               }}
             >
               X
