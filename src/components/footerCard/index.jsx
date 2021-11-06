@@ -1,6 +1,6 @@
 import React from 'react'
 
-const footerCard = ({ todoList, focusButton, setfocusButton }) => {
+const footerCard = ({ todoList, focusButton, onClick }) => {
   return (
     <div className="card">
       <div className="d-flex footer-padding">
@@ -34,7 +34,7 @@ const footerCard = ({ todoList, focusButton, setfocusButton }) => {
                         ? 'btn btn-light btn-selecionado'
                         : 'btn btn-light'
                     }
-                    onClick={() => setfocusButton('todos')}
+                    onClick={() => onClick('todos')}
                   >
                     Todos
                   </button>
@@ -47,7 +47,7 @@ const footerCard = ({ todoList, focusButton, setfocusButton }) => {
                         ? 'btn btn-light btn-selecionado'
                         : 'btn btn-light'
                     }
-                    onClick={() => setfocusButton('ativos')}
+                    onClick={() => onClick('ativo')}
                   >
                     Ativos
                   </button>
@@ -60,7 +60,7 @@ const footerCard = ({ todoList, focusButton, setfocusButton }) => {
                         ? 'btn btn-light btn-selecionado'
                         : 'btn btn-light'
                     }
-                    onClick={() => setfocusButton('completados')}
+                    onClick={() => onClick('completado')}
                   >
                     Completados
                   </button>

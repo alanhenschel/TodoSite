@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import './styles.css'
 
-const itemTodo = ({ todoList, onDelete }) => {
+const itemTodo = ({ todoList, focusButton, onDelete }) => {
   const [isShown, setIsShown] = useState(false)
-  return todoList.map((item, index) => {
+  const filteredList = todoList.filter(todo => focusButton === 'todos' ? todo : todo.status === focusButton)
+  return filteredList.map((item, index) => {
     return (
       <li
         className="card"

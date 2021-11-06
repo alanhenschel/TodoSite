@@ -28,7 +28,7 @@ const inputTodo = () => {
                   setTodoList(
                     todoList.concat({
                       texto: input,
-                      status: 'novo'
+                      status: 'ativo'
                     })
                   )
                   setInput('')
@@ -37,9 +37,9 @@ const inputTodo = () => {
             />
           </div>
           <ul>
-            <ListTodo todoList={todoList} onDelete={setTodoList} />
+            <ListTodo todoList={todoList} focusButton={focusButton} onDelete={setTodoList} />
           </ul>
-          <FooterCard todoList={todoList} focusButton={focusButton} setfocusButton={setfocusButton}/>
+          <FooterCard todoList={todoList} focusButton={focusButton} onClick={setfocusButton}/>
         </div>
       </div>
     </div>
