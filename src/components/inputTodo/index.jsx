@@ -39,7 +39,7 @@ const inputTodo = () => {
           <ul>
             <ListTodo todoList={todoList} focusButton={focusButton} onDelete={setTodoList} />
           </ul>
-          <FooterCard todoList={todoList} focusButton={focusButton} onClick={setfocusButton}/>
+          {todoList.length ? <FooterCard todoList={todoList} focusButton={focusButton} onClick={setfocusButton}/> : null}
         </div>
       </div>
     </div>

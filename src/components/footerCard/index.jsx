@@ -1,8 +1,9 @@
 import React from 'react'
+import './styles.css'
 
 const footerCard = ({ todoList, focusButton, onClick }) => {
   return (
-    <div className="card">
+    <div className="card footer">
       <div className="d-flex footer-padding">
         <span>
           {`${
