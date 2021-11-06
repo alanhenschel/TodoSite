@@ -28,7 +28,7 @@ const inputTodo = () => {
                   setTodoList(
                     todoList.concat({
                       texto: input,
-                      status: 'ativo'
+                      completado: false
                     })
                   )
                   setInput('')

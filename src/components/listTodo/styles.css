@@ -24,3 +24,8 @@ li > div {
 .form-check-input[type="checkbox"] {
   border-radius: 50%;
 }
+
+.todo-completado {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}

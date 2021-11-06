@@ -7,7 +7,7 @@ const footerCard = ({ todoList, focusButton, onClick }) => {
         <span>
           {`${
             todoList.filter(
-              (todo) => todo.status === 'novo' || todo.status === 'completado'
+              (todo) => todo.completado === false || todo.completado === true
             ).length
           } Itens faltando`}
         </span>
@@ -43,7 +43,7 @@ const footerCard = ({ todoList, focusButton, onClick }) => {
                   <button
                     type="button"
                     className={
-                      focusButton === 'ativos'
+                      focusButton === 'ativo'
                         ? 'btn btn-light btn-selecionado'
                         : 'btn btn-light'
                     }
@@ -56,7 +56,7 @@ const footerCard = ({ todoList, focusButton, onClick }) => {
                   <button
                     type="button"
                     className={
-                      focusButton === 'completados'
+                      focusButton === 'completado'
                         ? 'btn btn-light btn-selecionado'
                         : 'btn btn-light'
                     }

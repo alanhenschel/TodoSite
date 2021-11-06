@@ -3,7 +3,7 @@ import './styles.css'
 
 const itemTodo = ({ todoList, focusButton, onDelete }) => {
   const [isShown, setIsShown] = useState(false)
-  const filteredList = todoList.filter(todo => focusButton === 'todos' ? todo : todo.status === focusButton)
+  const filteredList = todoList.filter(todo => focusButton === 'todos' ? todo : focusButton === 'ativo' ? todo.completado === false : todo.completado)
   return filteredList.map((item, index) => {
     return (
       <li
@@ -18,9 +18,14 @@ const itemTodo = ({ todoList, focusButton, onDelete }) => {
               className="form-check-input"
               type="checkbox"
               value=""
+              checked={item.completado}
               id="flexCheckDefault"
+              onChange={() => {
+                item.completado = !item.completado
+                todoList.splice(index, 1, item)
+              }}
             />
-            <label className="form-check-label" htmlFor="flexCheckDefault">
+            <label className={item.completado ? 'form-check-label todo-completado' : 'form-check-label'} htmlFor="flexCheckDefault">
               {item.texto}
             </label>
           </div>
